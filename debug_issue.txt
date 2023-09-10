@@ -1,0 +1,22 @@
+
+https://tencentcloud.csdn.net/64d9ef53ff5c3157f8baacf5.html?dp_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTI5MzE1MCwiZXhwIjoxNjk0OTM3Mzg4LCJpYXQiOjE2OTQzMzI1ODgsInVzZXJuYW1lIjoidG9kYXlnb29kMjAwNCJ9.FzL3mgV9uyxVRJJLPLxaFCFvJpgqAEkcI__XQaiTe-Y
+
+
+在windows上面安装VScode调试go，结果一直报错failed to launch: could not launch process : not an executable file，同样的lanuch.json在另一台机器上正常运行。终于找到了问题
+
+在VScode的settings.json文件中有个配置
+
+"go.toolsEnvVars": {
+  "GOOS": "js",
+  "GOARCH": "wasm"
+},
+所以配置的运行OS不正确，将其去掉即可正常运行和debug
+
+
+go.mod 的祸害。 
+
+
+
+VSCode怎么打开settings.json文件
+
+

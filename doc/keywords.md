@@ -129,3 +129,34 @@ func 和 函数名 之间有一个括号, 声明struct , 如：( struct变量)
 
 使用unsafe.Sizeof()来获得clang中的sizeof 效果。 
 
+ m := Man{Name:"John", Age:20}
+
+fmt.Println("man size:", unsafe.Sizeof(m))
+
+
+## json.Marshal()
+
+把struct变成json字符串,使用json.Marshal
+
+## struct tag 
+
+知识点： 
+
+1. 反射 , reflection 
+
+2. json , Mashal , Unmashal
+
+Tag 规则
+Tag 本身是一个字符串，但字符串中却是，以空格分隔的 key:value 对 。
+key: 必须是非空字符串，字符串不能包含控制字符、空格、引号、冒号。
+value: 以双引号标记的字符串
+注意：冒号前后不能有空格
+
+————————————————
+原文作者：水墨先生
+转自链接：https://learnku.com/articles/61564
+ 
+
+Go语言之旅：Struct Tag的介绍及用法
+https://cloud.tencent.com/developer/article/1496468
+

@@ -27,6 +27,58 @@ https://zhuanlan.zhihu.com/p/109828249
 
 https://maelvls.dev/go111module-everywhere/
 
+### go module
+
+https://article.itxueyuan.com/Oe3oB3
+
+
+配置 GO111MODULE
+GO111MODULE环境变量主要是用来开启或关闭模块支持的。
+
+它有三个可选值：off、on、auto，默认值是 auto。
+
+GO111MODULE=off  无模块支持，go 会从 GOPATH 和 vendor 文件夹寻找包。
+GO111MODULE=on    模块支持，go 会忽略 GOPATH 和 vendor 文件夹，只根据 go.mod 下载依赖。
+GO111MODULE=auto 在 $GOPATH/src 外面且根目录有 go.mod 文件时，开启模块支持。
+在使用模块的时候，GOPATH 是无意义的，不过它还是会把下载的依赖储存在 $GOPATH/src/mod 中，也会把 go install 的结果放在 $GOPATH/bin 中。
+
+依赖本地包：
+https://zhuanlan.zhihu.com/p/105556877
+
+go mod graph | gmchart
+生成go包依赖图， 挺好用的功能，参见https://juejin.cn/post/7193265628277375034
+
+
+
+### Package 包使用
+
+1. go使用package管理源文件，同一个路径下只能存在一个package ，一个package 包可以拆成多个源文件组成
+
+2. package 是最基本的分发单位和工程管理中依赖关系的体现
+
+3. 每个 Go 语言源代码文件开头都拥有一个 package 声明，表示源码文件所属代码包,要生成 Go 语言可以执行程序，必须要有 main 的 package 包，且必须在该包下有 main() 函数
+
+package main
+
+4. 建议引入的 package 包的名称和当前属于的文件名相同
+
+
+
+
+### module和package 是什么关系？ 
+
+一个module里面有多个package
+
+https://www.jianshu.com/p/07ffc5827b26
+
+https://jaycechant.info/2020/golang-1-13-module-VS-package/
+
+https://zhuanlan.zhihu.com/p/392958300
+
+
+
+值得仔细研究一下。 
+
 ## 我要提出问题
 
 
@@ -128,39 +180,10 @@ Mode                 LastWriteTime         Length Name
 实际上，go install 命令只比 go build 命令多做了一件事，即：安装编译后的结果文件到指定目录。
 
 
-## go module
-
-https://article.itxueyuan.com/Oe3oB3
-
-
-配置 GO111MODULE
-GO111MODULE环境变量主要是用来开启或关闭模块支持的。
-
-它有三个可选值：off、on、auto，默认值是 auto。
-
-GO111MODULE=off  无模块支持，go 会从 GOPATH 和 vendor 文件夹寻找包。
-GO111MODULE=on    模块支持，go 会忽略 GOPATH 和 vendor 文件夹，只根据 go.mod 下载依赖。
-GO111MODULE=auto 在 $GOPATH/src 外面且根目录有 go.mod 文件时，开启模块支持。
-在使用模块的时候，GOPATH 是无意义的，不过它还是会把下载的依赖储存在 $GOPATH/src/mod 中，也会把 go install 的结果放在 $GOPATH/bin 中。
-
-依赖本地包：
-https://zhuanlan.zhihu.com/p/105556877
 
 
 
-## Package 包使用
 
-package 是最基本的分发单位和工程管理中依赖关系的体现
-
-每个 Go 语言源代码文件开头都拥有一个 package 声明，表示源码文件所属代码包
-
-要生成 Go 语言可以执行程序，必须要有 main 的 package 包，且必须在该包下有 main() 函数
-
-package main
-
-同一个路径下只能存在一个package ，一个package 包可以拆成多个源文件组成
-
-建议引入的 package 包的名称和当前属于的文件名相同
 
 ## import 的用法及原理
 
@@ -295,3 +318,8 @@ https://geek-docs.com/vscode/vscode-tutorials/vscode-breadcrumb.html
 
 
 
+# 最佳实践
+
+https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md
+
+https://github.com/danceyoung/goslayer

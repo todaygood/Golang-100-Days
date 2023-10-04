@@ -28,3 +28,13 @@ GOMAXPROCS 同时也是一个环境变量，在应用程序启动前设置环境
 [在容器中设置GOMAXPROCS](https://cloud.tencent.com/developer/article/1832721)
 
 
+
+
+
+## golang 调度
+
+Runtime: Golang中channel实现原理源码分析
+https://blog.haohtml.com/archives/20760
+
+深入golang runtime的调度
+https://zboya.github.io/post/go_scheduler/

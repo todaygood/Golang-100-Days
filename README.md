@@ -374,6 +374,25 @@ Go语言专门针对多处理器系统应用程序的编程进行了优化，使
 
 ### Day42~43 - [Gin框架](./Day42-43(Gin框架))
 
+初次玩 Go 可以随便选择一个入门，echo, gin, net/http 都很好，也都差别不大。我玩过这些，现在看大家推荐发现了 fiber, 有点意思，下次就玩 fiber 了。
+
+gin专注于轻量级的Web Server，比较简单，易于理解，路由和中间件设计不错，可以看做替代标准库net/http.Server的路由加强版web server。献给爱造轮子的朋友们。
+
+ echo gin 是差不多，但是我根喜欢 echo，1 、内存 Logger 不需要调用一个方法后收到输出 err，如果有错误内置 err 会自动输出。2 、echo.Context 是一个接口，可以自己去 Warp 定义其他行为 3 、echo 的路由器比 gin 使用的 httprouter 更强，性能差不多在一个级别内，但是 echo 实现了路由优先级。
+
+ 自己阅读过 echo gin http.Server 全部、beego 大部分、iris 少量代码，
+net/http 体系下 echo > gin > beego > net/http > iris 、goframe 、fiber，下面列出我自己看到的一些不足，不推荐 fasthttp 原因生态相对弱，仅支持 http/1.1 。
+
+https://www.v2ex.com/t/730965
+
+
+https://github.com/cloudwego/hertz
+
+Hertz 是一个 Golang 微服务 HTTP 框架，在设计之初参考了其他开源框架 fasthttp 、gin 、echo 的优势，并结合字节跳动内部的需求，使其具有高易用性、高性能、高扩展性等特点，目前在字节跳动内部已广泛使用。如今越来越多的微服务选择使用 Golang ，如果对微服务性能有要求，又希望框架能够充分满足内部的可定制化需求，Hertz 会是一个不错的选择
+
+
+
+
 ### Day44 - [MySQL数据库高级](./Day44(MySQL数据库高级))
 
 ### Day45 - [Git](./Day45(Git))

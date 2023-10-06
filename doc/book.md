@@ -49,6 +49,16 @@ https://github.com/Unknwon/go-study-index
 
 https://golangbot.com/
 
+
+https://learnku.com/go/wikis
+
+https://learnku.com/go/wikis/38426
+
+https://learnku.com/go/wikis/49781
+
+https://learnku.com/articles/69868
+
+
  
 # golang面试题
 
@@ -58,3 +68,26 @@ https://learnku.com/articles/56078
 
 https://github.com/lifei6671/interview-go
 
+## go微服务
+
+https://jfeng45.github.io/introduction/
+
+https://github.com/jfeng45/reservegrpc
+
+https://github.com/cloudwego/hertz/
+
+https://lstack.isscloud.com/document/ahs/5476751455043.html#%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E7%BC%96%E6%8E%92
+
+
+
+## channel 
+
+https://www.jianshu.com/p/554e210bdca4
+
+https://zhuanlan.zhihu.com/p/392958300
+
+## 指针
+
+https://gfw.go101.org/article/pointer.html
+
+https://zhuanlan.zhihu.com/p/351428978

@@ -200,22 +200,4 @@ golang不支持try...catch这样的结构化的异常解决方式，因为觉得
 
 
 
-
-
-本文图片来自网络，侵删
-
-
-
-
-
-千锋Go语言的学习群：784190273
-
-对应视频地址：
-
-https://www.bilibili.com/video/av47467197
-
-https://www.bilibili.com/video/av56018934/
-
-源代码：
-
-https://github.com/rubyhan1314/go_foundation
+ 
